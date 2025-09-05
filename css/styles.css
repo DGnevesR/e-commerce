@@ -53,6 +53,7 @@ header h1 {
 
 .sidebar ul li {
     margin: 0 15px;
+    position: relative;
 }
 
 .sidebar ul li a {
@@ -63,6 +64,31 @@ header h1 {
 
 .sidebar ul li a:hover {
     text-decoration: underline;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin: 5px 0;
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    font-weight: normal;
 }
 
 /* Main Content */
@@ -136,6 +162,61 @@ main {
     background-color: #333;
 }
 
+.cart {
+    text-align: center;
+}
+
+.cart button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.cart button:hover {
+    background-color: #333;
+}
+
+.login, .contact, .policy {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.login-form, .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-form label, .contact-form label {
+    font-weight: bold;
+}
+
+.login-form input, .contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-form button, .contact-form button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-form button:hover, .contact-form button:hover {
+    background-color: #333;
+}
+
 /* Footer */
 footer {
     background-color: #000;
@@ -176,6 +257,11 @@ footer {
 
     .sidebar ul li {
         margin: 10px 0;
+    }
+
+    .dropdown-menu {
+        position: static;
+        background-color: #333;
     }
 
     .products {
